@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Wireless Media | Frontend Zadatak</title>
+</head>
+<body>
+  <header class="flex-container pos-relative">
+    <a href="#" class="col-6">
+      <img src="./static/images/wm-logo.png" alt="" class="responsive-img">
+    </a>
+
+    <ul class="list flex-container align-center justify-end col-6 pl-15">
+      <li class="list-item">
+        <a href="#" class="list-link" id="navMenu" role="button">
+          <img src="./static/images/menu-icon.png" alt="">
+        </a>
+      </li>
+      <li class="list-item">
+        <a href="#" class="list-link" id="searchMenu" role="button">
+          <img src="./static/images/search-icon.png" alt="">
+        </a>
+      </li>
+    </ul>
+
+    <form class="display-none" id="searchForm">
+      <input type="text">
+    </form>
+  </header>
+
+  <div class="display-none" id="collapsedMenu">
+    <ul class="list list-column">
+      <li class="list-item">
+        <a class="list-link" href="#">Home</a>
+      </li>
+      <li class="list-item">
+        <a class="list-link" href="#">About us</a>
+      </li>
+      <li class="list-item">
+        <a class="list-link" href="#">Our work</a>
+      </li>
+      <li class="list-item">
+        <a class="list-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

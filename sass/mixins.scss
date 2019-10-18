@@ -1,0 +1,10 @@
+/*
+  * Mixin which creates a linear gradient from given colors
+  * @author Milos Marinkovic
+  * @parameter {$property, $angle, $color-1, $color-1-stop, $color-2, $color-2-stop}
+*/
+
+@mixin make-gradient($property, $angle, $color-1, $color-1-stop, $color-2, $color-2-stop){
+  #{$property}: $color-1;
+  #{$property}: linear-gradient($angle, $color-1 $color-1-stop, $color-2 $color-2-stop);
+}
