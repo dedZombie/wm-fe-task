@@ -4,3 +4,11 @@
   background-size: 21px 16px;
   background-position: center center;
 }
+.gradient-border {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 8px;
+  width: 100%;
+  @include make-gradient(background, 90deg, $green-light, 0%, $blue-dark, 100%);
+}

@@ -8,45 +8,76 @@
   <title>Wireless Media | Frontend Zadatak</title>
 </head>
 <body>
-  <header class="flex-container pos-relative">
-    <a href="#" class="col-6">
-      <img src="./static/images/wm-logo.png" alt="" class="responsive-img">
-    </a>
+  <header class="pos-relative p-vert-10">
 
-    <ul class="list flex-container align-center justify-end col-6 pl-15">
-      <li class="list-item">
-        <a href="#" class="list-link" id="navMenu" role="button">
-          <img src="./static/images/menu-icon.png" alt="">
+    <div class="flex-container">
+      <div class="wrap">
+        <a href="#" class="col-6">
+          <img src="./static/images/wm-logo.png" alt="" class="responsive-img">
         </a>
-      </li>
-      <li class="list-item">
-        <a href="#" class="list-link" id="searchMenu" role="button">
-          <img src="./static/images/search-icon.png" alt="">
-        </a>
-      </li>
-    </ul>
+
+        <ul class="list col-4 flex-container align-center justify-end md-hidden">
+          <li class="list-item">
+            <a href="#" class="list-link" id="navMenu" role="button">
+              <img src="./static/images/menu-icon.png" alt="">
+            </a>
+          </li>
+        </ul>
+
+        <ul class="list col-4 flex-container align-center justify-center md-visible">
+          <li class="list-item">
+            <a href="#" class="list-link">Test 1</a>
+          </li>
+          <li class="list-item">
+            <a href="#" class="list-link">Test 2</a>
+          </li>
+          <li class="list-item">
+            <a href="#" class="list-link">Test 3</a>
+          </li>
+          <li class="list-item">
+            <a href="#" class="list-link">Test 4</a>
+          </li>
+        </ul>
+
+        <div class="col-2 flex-container align-center">
+          <a href="#" class="list-link" id="searchMenu" role="button">
+            <img src="./static/images/search-icon.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
 
     <form class="display-none" id="searchForm">
       <input type="text">
     </form>
+
+    <div class="gradient-border"></div>
   </header>
 
+  <!-- Mobile navbar -->
   <div class="display-none" id="collapsedMenu">
     <ul class="list list-column">
-      <li class="list-item">
-        <a class="list-link" href="#">Home</a>
+      <li class="list-item bg-green--light">
+        <a class="list-link color-white text-upper" href="#">Home</a>
       </li>
-      <li class="list-item">
-        <a class="list-link" href="#">About us</a>
+      <li class="list-item bg-green--dark">
+        <a class="list-link color-white text-upper" href="#">About us</a>
       </li>
-      <li class="list-item">
-        <a class="list-link" href="#">Our work</a>
+      <li class="list-item bg-blue--light">
+        <a class="list-link color-white text-upper" href="#">Our work</a>
       </li>
-      <li class="list-item">
-        <a class="list-link" href="#">Contact</a>
+      <li class="list-item bg-blue--dark">
+        <a class="list-link color-white text-upper" href="#">Contact</a>
       </li>
     </ul>
   </div>
+
+  <!-- SLIDER SECTION -->
+  <section>
+    <div class="slider-bg">
+      <img src="./static/images/dots.png" alt="" class="responsive-img">
+    </div>
+  </section>
 
   <script src="./app.js"></script>
 </body>

@@ -2,38 +2,24 @@ var collapsedMenu = document.getElementById("collapsedMenu");
 var navMenuBtn    = document.getElementById("navMenu");
 var searchMenuBtn = document.getElementById("searchMenu");
 
-navMenuBtn.addEventListener("click", function() {
-  var inactiveImgSrc = "./static/images/menu-icon.png";
-  var activeImgSrc = "./static/images/menu-icon-active.png"
-  var collapsedMenu = document.getElementById("collapsedMenu");
+function toggleClass(element, target, inactiveImgSrc , activeImgSrc) {
+  element.classList.toggle("active");
 
-  navMenuBtn.classList.toggle("active");
-
-  if(navMenuBtn.classList.contains("active")) {
-    navMenuBtn.children[0].src = activeImgSrc;
-    collapsedMenu.classList.remove("display-none");
-    collapsedMenu.classList.add("display-block");
+  if(element.classList.contains("active")) {
+    element.children[0].src = activeImgSrc;
+    target.classList.remove("display-none");
+    target.classList.add("display-block");
   } else {
-    navMenuBtn.children[0].src = inactiveImgSrc;
-    collapsedMenu.classList.remove("display-block");
-    collapsedMenu.classList.add("display-none");
+    element.children[0].src = inactiveImgSrc;
+    target.classList.remove("display-block");
+    target.classList.add("display-none");
   }
+}
+
+navMenuBtn.addEventListener("click", function() {
+  return toggleClass(navMenuBtn, collapsedMenu, "./static/images/menu-icon.png", "./static/images/menu-icon-active.png");
 });
 
 searchMenuBtn.addEventListener("click", function() {
-  var inactiveImgSrc = "./static/images/search-icon.png";
-  var activeImgSrc = "./static/images/search-icon-active.png"
-  var searchForm = document.getElementById("searchForm");
-
-  searchMenuBtn.classList.toggle("active");
-
-  if(searchMenuBtn.classList.contains("active")) {
-    searchMenuBtn.children[0].src = activeImgSrc;
-    searchForm.classList.remove("display-none");
-    searchForm.classList.add("display-block");
-  } else {
-    searchMenuBtn.children[0].src = inactiveImgSrc;
-    searchForm.classList.remove("display-block");
-    searchForm.classList.add("display-none");
-  }
+  return toggleClass(searchMenuBtn, searchForm, "./static/images/search-icon.png", "./static/images/search-icon-active.png");
 });

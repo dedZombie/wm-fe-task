@@ -11,6 +11,27 @@ html, body {
   font-family: "DINPro", Arial, Helvetica, sans-serif;
 }
 
+/************************************
+  * UTILITY CLASSES
+*************************************/
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.p-vert-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .pl-15 {
   padding-left: 15px !important;
 }
@@ -23,4 +44,12 @@ html, body {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.color-white {
+  color: white;
+}
+
+.text-upper {
+  text-transform: uppercase;
 }
