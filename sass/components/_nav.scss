@@ -4,11 +4,21 @@
   background-size: 21px 16px;
   background-position: center center;
 }
-.gradient-border {
+.gradient-bar {
   position: absolute;
   left: 0;
   top: 100%;
   height: 8px;
   width: 100%;
   @include make-gradient(background, 90deg, $green-light, 0%, $blue-dark, 100%);
+}
+
+.mobile-nav {
+  & ul {
+    & li {
+      &:not(:last-child) {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
 }

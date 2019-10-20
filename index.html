@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./vendor/font-awesome/css/all.css">
   <link rel="stylesheet" href="./style.css">
   <title>Wireless Media | Frontend Zadatak</title>
 </head>
@@ -12,37 +13,40 @@
 
     <div class="flex-container">
       <div class="wrap">
-        <a href="#" class="col-6">
-          <img src="./static/images/wm-logo.png" alt="" class="responsive-img">
-        </a>
-
-        <ul class="list col-4 flex-container align-center justify-end md-hidden">
-          <li class="list-item">
-            <a href="#" class="list-link" id="navMenu" role="button">
-              <img src="./static/images/menu-icon.png" alt="">
-            </a>
-          </li>
-        </ul>
-
-        <ul class="list col-4 flex-container align-center justify-center md-visible">
-          <li class="list-item">
-            <a href="#" class="list-link">Test 1</a>
-          </li>
-          <li class="list-item">
-            <a href="#" class="list-link">Test 2</a>
-          </li>
-          <li class="list-item">
-            <a href="#" class="list-link">Test 3</a>
-          </li>
-          <li class="list-item">
-            <a href="#" class="list-link">Test 4</a>
-          </li>
-        </ul>
-
-        <div class="col-2 flex-container align-center">
-          <a href="#" class="list-link" id="searchMenu" role="button">
-            <img src="./static/images/search-icon.png" alt="">
+        <div class="col-6">
+          <a href="#">
+            <img src="./static/images/wm-logo.png" alt="" class="responsive-img">
           </a>
+        </div>
+        <div class="col-6 display-flex align-center justify-end">
+          <ul class="list md-hidden">
+            <li class="list-item">
+              <a href="#" class="list-link" id="navMenu" role="button">
+                <img src="./static/images/menu-icon.png" alt="">
+              </a>
+            </li>
+          </ul>
+
+          <ul class="list md-visible">
+            <li class="list-item">
+              <a href="#" class="list-link">Test 1</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Test 2</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Test 3</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Test 4</a>
+            </li>
+          </ul>
+
+          <div class="">
+            <a href="#" class="list-link" id="searchMenu" role="button">
+              <img src="./static/images/search-icon.png" alt="">
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -51,11 +55,11 @@
       <input type="text">
     </form>
 
-    <div class="gradient-border"></div>
+    <div class="gradient-bar"></div>
   </header>
 
   <!-- Mobile navbar -->
-  <div class="display-none" id="collapsedMenu">
+  <div class="display-none mobile-nav" id="collapsedMenu">
     <ul class="list list-column">
       <li class="list-item bg-green--light">
         <a class="list-link color-white text-upper" href="#">Home</a>
@@ -73,9 +77,32 @@
   </div>
 
   <!-- SLIDER SECTION -->
-  <section>
-    <div class="slider-bg">
-      <img src="./static/images/dots.png" alt="" class="responsive-img">
+  <section class="slider">
+    <div class="slider-wrapper">
+      <div class="slide current">
+        <div class="slide-img">
+          <img src="./static/images/slider-bg-image.png" alt="">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-img">
+          <img src="./static/images/slider-bg-image.png" alt="">
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-img">
+          <img src="./static/images/slider-bg-image.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="slider-navigation">
+      <button class="btn-reset" id="prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <p>Lorem ipsum dolor sit</p>
+      <button class="btn-reset" id="next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
 
