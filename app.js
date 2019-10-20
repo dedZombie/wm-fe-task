@@ -3,6 +3,7 @@ var navMenuBtn    = document.getElementById("navMenu");
 var searchMenuBtn = document.getElementById("searchMenu");
 var slider        = document.querySelector(".slider");
 var slides        = document.querySelectorAll(".slide");
+var sliderText    = document.querySelectorAll(".slider-text");
 
 function toggleClass(element, target, inactiveImgSrc , activeImgSrc) {
   element.classList.toggle("active");
@@ -30,35 +31,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var nextSlide = function() {
     // Get current class
-    var current = document.querySelector(".current");
-    // Remove current class
-    current.classList.remove("current");
-    // Check for sibling element
-    if (current.nextElementSibling) {
-      // Add current class to next sibling
-      current.nextElementSibling.classList.add("current");
-    } else {
-      // Add current class to first element
-      slides[0].classList.add("current");
-    }
+    var current = document.querySelectorAll(".current");
 
-    setTimeout(function() {
-      current.classList.remove("current");
-    }, 200);
+    // Loop through elements with class of current
+    for (var item of current) {
+      // Remove current class
+      item.classList.remove("current");
+
+      // Check for sibling element
+      if (item.nextElementSibling) {
+        // Add current class to next sibling
+        item.nextElementSibling.classList.add("current");
+      } else {
+        // Add current class to first element
+        slides[0].classList.add("current");
+        sliderText[0].classList.add("current");
+      }
+
+      setTimeout(function() {
+        item.classList.remove("current");
+      }, 100);
+    }
   }
 
   var prevSlide = function() {
-    var current = document.querySelector(".current");
-    current.classList.remove("current");
-    if (current.previousElementSibling) {
-      current.previousElementSibling.classList.add("current");
-    } else {
-      slides[slides.length - 1].classList.add("current");
-    }
+    var current = document.querySelectorAll(".current");
 
-    setTimeout(function() {
-      current.classList.remove("current");
-    }, 200);
+    for (var item of current) {
+      item.classList.remove("current");
+
+      if (item.previousElementSibling) {
+        item.previousElementSibling.classList.add("current");
+      } else {
+        slides[slides.length - 1].classList.add("current");
+        sliderText[sliderText.length - 1].classList.add("current");
+      }
+
+      setTimeout(function() {
+        item.classList.remove("current");
+      }, 100);
+    }
   }
 
   applyMarginTop(slider, gradientBarHeight, "px");
