@@ -248,13 +248,13 @@
   justify-content: space-between;
 }
 
-.md-hidden {
+.md-hidden, .large-hidden {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
-.md-visible {
+.md-visible, .large-visible {
   display: none !important;
 }
 
@@ -266,6 +266,18 @@
   }
 
   .md-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .large-visible {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .large-hidden {
     display: none !important;
   }
 }

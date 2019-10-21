@@ -27,18 +27,41 @@
             </li>
           </ul>
 
-          <ul class="list md-visible">
+          <ul class="list md-visible large-hidden" id="md-screen-nav">
             <li class="list-item">
-              <a href="#" class="list-link">Test 1</a>
+              <a href="#" class="list-link active">
+                <img src="./static/icons/home-icon-mob.png" alt="">
+              </a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link">Test 2</a>
+              <a href="#" class="list-link">
+                <img src="./static/icons/about-icon-mob.png" alt="">
+              </a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link">Test 3</a>
+              <a href="#" class="list-link">
+                <img src="./static/icons/work-icon-mob.png" alt="">
+              </a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link">Test 4</a>
+              <a href="#" class="list-link">
+                <img src="./static/icons/contact-icon-mob.png" alt="">
+              </a>
+            </li>
+          </ul>
+
+          <ul class="list large-visible">
+            <li class="list-item">
+              <a href="#" class="list-link text-upper">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link text-upper">About us</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link text-upper">Our work</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link text-upper">Contact</a>
             </li>
           </ul>
 
@@ -94,9 +117,15 @@
       <div class="slide">
         <div class="slide-img">
           <img src="./static/images/slider-bg-image.png" alt="">
-          <p class="md-visible">Sed interdum magna velit  </p>
+          <p class="md-visible">Sed interdum magna velit</p>
         </div>
       </div>
+
+      <ul class="list list-block slider-nav-circle md-visible">
+        <li class="list-item"><a href="#" class="list-link active"></a></li>
+        <li class="list-item"><a href="#" class="list-link"></a></li>
+        <li class="list-item"><a href="#" class="list-link"></a></li>
+      </ul>
     </div>
     <div class="slider-navigation md-hidden">
       <button id="prev">
@@ -113,12 +142,13 @@
     </div>
   </section>
 
-  <section class="flex-container mb-50 p-hor-50">
+  <!-- MAIN CONTENT SECTION -->
+  <section class="flex-container col-large-10 mb-50 p-hor-50">
     <h2 class="text-upper text-center">Who we are</h2>
     <div class="wrap">
       <div class="article col-10 col-med-12">
         <div class="wrap">
-          <div class="article-img col-med-6">
+          <div class="article-img col-med-6" id="cap">
             <img src="./static/icons/who_we_are_1.png" alt="">
           </div>
           <div class="article-info col-med-6">
@@ -130,7 +160,7 @@
       </div>
       <div class="article col-10 col-med-12">
         <div class="wrap">
-          <div class="article-img col-med-6">
+          <div class="article-img col-med-6" id="thumb-up">
             <img src="./static/icons/who_we_are_2.png" alt="">
           </div>
           <div class="article-info col-med-6">
@@ -145,42 +175,43 @@
     <h2 class="text-upper text-center">What we do</h2>
     <div class="wrap">
       <div class="article col-10 col-med-6">
-        <div class="article-img">
+        <div class="article-img" id="calc">
           <img src="./static/icons/what_we_do_1.png" alt="">
         </div>
       </div>
       <div class="article col-10 col-med-6">
-        <div class="article-img">
+        <div class="article-img" id="cloud">
           <img src="./static/icons/what_we_do_2.png" alt="">
         </div>
       </div>
       <div class="article col-10 col-med-6">
-        <div class="article-img">
+        <div class="article-img" id="clock">
           <img src="./static/icons/what_we_do_3.png" alt="">
         </div>
       </div>
       <div class="article col-10 col-med-6">
-        <div class="article-img">
+        <div class="article-img" id="heart">
           <img src="./static/icons/what_we_do_4.png" alt="">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER SECTION -->
   <footer class="display-flex justify-between align-center">
     <ul class="list social-icons">
       <li class="list-item">
-        <a class="list-link" href="#">
+        <a class="list-link active" href="#!">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
       <li class="list-item">
-        <a class="list-link" href="#">
+        <a class="list-link" href="#!">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
       <li class="list-item">
-        <a class="list-link" href="#">
+        <a class="list-link" href="#!">
           <i class="fas fa-envelope"></i>
         </a>
       </li>

@@ -13,6 +13,7 @@
     @include align-center();
     background-color: #e9e9e9;
     width: 100%;
+    cursor: pointer;
     & img {
       max-width: 100%;
       height: auto;
@@ -45,6 +46,9 @@
       background-color: #f3f3f4;
       margin-left: auto;
       cursor: pointer;
+      &:hover, &:active, &:focus, &:visited {
+        background-color: $green-light;
+      }
     }
   }
 

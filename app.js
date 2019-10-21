@@ -28,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
   var gradientBarHeight = gradientBar.clientHeight || gradientBar.scrollHeight;
   var next = document.getElementById("next");
   var prev = document.getElementById("prev");
+  var mobNav = document.querySelectorAll("#md-screen-nav li a");
+  var cap = document.getElementById("cap");
+  var thumbUp = document.getElementById("thumb-up");
+  var calc = document.getElementById("calc");
+  var cloud = document.getElementById("cloud");
+  var clock = document.getElementById("clock");
+  var heart = document.getElementById("heart");
 
   var nextSlide = function() {
     // Get current class
@@ -83,6 +90,30 @@ document.addEventListener("DOMContentLoaded", function() {
     return toggleClass(searchMenuBtn, searchForm, "./static/images/search-icon.png", "./static/images/search-icon-active.png");
   });
 
+  cap.addEventListener("click", function() {
+    return toggleClass(cap, cap, "./static/icons/who_we_are_1.png", "./static/icons/who_we_are_1-active.png");
+  });
+
+  thumbUp.addEventListener("click", function() {
+    return toggleClass(thumbUp, thumbUp, "./static/icons/who_we_are_2.png", "./static/icons/who_we_are_2-active.png");
+  });
+
+  calc.addEventListener("click", function() {
+    return toggleClass(calc, calc, "./static/icons/what_we_do_1.png", "./static/icons/what_we_do_1-active.png");
+  });
+
+  cloud.addEventListener("click", function() {
+    return toggleClass(cloud, cloud, "./static/icons/what_we_do_2.png", "./static/icons/what_we_do_2-active.png");
+  });
+
+  clock.addEventListener("click", function() {
+    return toggleClass(clock, clock, "./static/icons/what_we_do_3.png", "./static/icons/what_we_do_3-active.png");
+  });
+
+  heart.addEventListener("click", function() {
+    return toggleClass(heart, heart, "./static/icons/what_we_do_4.png", "./static/icons/what_we_do_4-active.png");
+  });
+
   next.addEventListener("click", function() {
     nextSlide();
   });
@@ -90,4 +121,16 @@ document.addEventListener("DOMContentLoaded", function() {
   prev.addEventListener("click", function() {
     prevSlide();
   });
+
+  var socialIcons = document.querySelector(".social-icons");
+  var socialIconsChildren = socialIcons.children;
+
+  for (var i = 0; i < socialIconsChildren.length; i++) {
+    console.dir(socialIconsChildren[i].firstElementChild);
+    socialIconsChildren[i].addEventListener("click", function() {
+      if (socialIconsChildren[i].firstElementChild.classList.contains("active")) {
+        console.log("RADI!");
+      }
+    });
+  }
 });
