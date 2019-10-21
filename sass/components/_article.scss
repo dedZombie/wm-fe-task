@@ -1,51 +1,58 @@
 .article {
+  @include display-flex();
+  @include flex-column();
+  @include justify-center();
+  @include align-center();
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 auto 20px auto;
 
   & .article-img {
-    padding: 50px;
+    @include display-flex();
+    @include justify-center();
+    @include align-center();
     background-color: #e9e9e9;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
+    width: 100%;
     & img {
       max-width: 100%;
       height: auto;
+      padding: 50px;
     }
   }
 
-  & p {
-    font-family: Arial;
-    font-weight: normal;
-    font-size: 15px;
-    color: $text-color-light;
+  & .article-info {
+    @include display-flex();
+    @include flex-column();
+    width: 100%;
+
+    & p {
+      font-family: Arial;
+      font-weight: normal;
+      font-size: 15px;
+      color: $text-color-light;
+    }
+
+    & button {
+      outline: none;
+      border: 0;
+      background: none;
+      font-family: Arial;
+      font-weight: normal;
+      font-size: 11px;
+      color: $text-color-light;
+      text-transform: uppercase;
+      padding: 5px;
+      background-color: #f3f3f4;
+      margin-left: auto;
+      cursor: pointer;
+    }
   }
 
-  & button {
-    outline: none;
-    border: 0;
-    background: none;
-    font-family: Arial;
-    font-weight: normal;
-    font-size: 11px;
-    color: $text-color-light;
-    text-transform: uppercase;
-    padding: 5px;
-    background-color: #f3f3f4;
-    float: right;
-    &::before,
-    &::after{
-      content: "";
-      clear: both;
-      display: table;
+  @media screen and (min-width: 480px) {
+    @include flex-row();
+
+    & .article-info {
+      @include justify-between();
     }
   }
 }
