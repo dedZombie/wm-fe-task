@@ -34,22 +34,21 @@ document.addEventListener("DOMContentLoaded", function() {
     var current = document.querySelectorAll(".current");
 
     // Loop through elements with class of current
-    for (var item of current) {
+    for (var i = 0; i < current.length; i++) {
       // Remove current class
-      item.classList.remove("current");
+      current[i].classList.remove("current");
 
-      // Check for sibling element
-      if (item.nextElementSibling) {
+      // Check for sibling elements
+      if (current[i].nextElementSibling) {
         // Add current class to next sibling
-        item.nextElementSibling.classList.add("current");
+        current[i].nextElementSibling.classList.add("current");
       } else {
-        // Add current class to first element
         slides[0].classList.add("current");
         sliderText[0].classList.add("current");
       }
 
       setTimeout(function() {
-        item.classList.remove("current");
+        current[i].classList.remove("current");
       }, 100);
     }
   }
@@ -57,19 +56,20 @@ document.addEventListener("DOMContentLoaded", function() {
   var prevSlide = function() {
     var current = document.querySelectorAll(".current");
 
-    for (var item of current) {
-      item.classList.remove("current");
+    for (var i = 0; i < current.length; i++) {
+      current[i].classList.remove("current");
 
-      if (item.previousElementSibling) {
-        item.previousElementSibling.classList.add("current");
+      // Check for previous sibling element
+      if (current[i].previousElementSibling) {
+        current[i].previousElementSibling.classList.add("current");
       } else {
         slides[slides.length - 1].classList.add("current");
         sliderText[sliderText.length - 1].classList.add("current");
       }
 
       setTimeout(function() {
-        item.classList.remove("current");
-      }, 100);
+        current[i].classList.remove("current");
+      });
     }
   }
 

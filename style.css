@@ -200,21 +200,21 @@ html, body {
   justify-content: space-between; }
 
 .md-hidden {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
 
 .md-visible {
-  display: none; }
+  display: none !important; }
 
 @media screen and (min-width: 480px) {
   .md-visible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
 
   .md-hidden {
-    display: none; } }
+    display: none !important; } }
 .nav-menu {
   background-image: url("../../static/images/menu-icon.png");
   background-repeat: no-repeat;
@@ -297,6 +297,19 @@ html, body {
       top: 50%;
       left: 50%;
       transform: translate3d(-50%, -50%, 0) translateZ(0); }
+    .slide .slide-img p {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate3d(0, 0, 0);
+      font-size: 51px;
+      width: 60%;
+      margin: 0;
+      height: 100%;
+      vertical-align: middle;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
 
 .slider-text-container {
   display: -webkit-box;
@@ -338,9 +351,6 @@ html, body {
       left: 0; }
 
 .slider-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;

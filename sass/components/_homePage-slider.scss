@@ -35,6 +35,20 @@
       left: 50%;
       transform: translate3d(-50%, -50%, 0) translateZ(0);
     }
+    & p {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate3d(0, 0, 0);
+      font-size: 51px;
+      width: 60%;
+      margin: 0;
+      height: 100%;
+      vertical-align: middle;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 }
 
@@ -83,9 +97,9 @@
 }
 
 .slider-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: flex;
   -webkit-box-pack: justify;
     -ms-flex-pack: justify;
   justify-content: space-between;
